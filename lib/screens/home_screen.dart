@@ -14,7 +14,9 @@ class HomeScreen extends StatelessWidget {
             builder: (context, cart, child) {
               return Stack(
                 children: [
-                  IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
+                  IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {
+                    Navigator.pushNamed(context, '/cart');
+                  }),
                   if (cart.itemCount > 0)
                     Positioned(
                       right: 8,

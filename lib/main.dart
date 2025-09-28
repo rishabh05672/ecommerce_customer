@@ -1,7 +1,10 @@
 import 'package:ecommerce_customer/provider/auth_provider.dart';
 import 'package:ecommerce_customer/provider/cart_provider.dart';
 import 'package:ecommerce_customer/provider/favorite_provider.dart';
+import 'package:ecommerce_customer/provider/order_provider.dart';
 import 'package:ecommerce_customer/provider/product_provider.dart';
+import 'package:ecommerce_customer/screens/cart_screen.dart';
+import 'package:ecommerce_customer/screens/checkout_screen.dart';
 import 'package:ecommerce_customer/screens/home_screen.dart';
 import 'package:ecommerce_customer/screens/login_screen.dart';
 import 'package:ecommerce_customer/screens/signup_screen.dart';
@@ -31,6 +34,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ProductProvider()),
         ChangeNotifierProvider(create: (_) => CartProvider()),
         ChangeNotifierProvider(create: (_) => FavoriteProvider()),
+        ChangeNotifierProvider(create: (_) => OrderProvider()),
       ],
       child: MaterialApp(
         title: 'Ecommerce Shop',
@@ -41,6 +45,8 @@ class MyApp extends StatelessWidget {
           '/login': (context) => LoginScreen(),
           '/home': (context) => HomeScreen(),
           '/signup': (context) => SignupScreen(),
+          '/cart': (context) => CartScreen(),
+          '/checkout':(context) => CheckoutScreen()
         },
       ),
     );

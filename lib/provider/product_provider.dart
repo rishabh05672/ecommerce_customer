@@ -6,9 +6,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class ProductProvider with ChangeNotifier {
   final SupabaseClient _supabase = Supabase.instance.client;
 
-  List<Product> _products = []; // Ab error nahi aayega
-  List<Category> _categories = []; // Ab error nahi aayega
-  List<Product> _filteredProducts = []; // Ab error nahi aayega
+  List<Product> _products = []; 
+  List<Category> _categories = [];
+  List<Product> _filteredProducts = []; 
 
   bool _isLoading = false;
   String? _errorMessage;
